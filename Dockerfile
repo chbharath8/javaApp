@@ -8,4 +8,4 @@ WORKDIR /app
 COPY . /app
 
 # Command to run your Java program
-CMD ["java", "-jar", "javaApp.jar"]
+CMD ["java", "-jar", "HelloWorld.jar"]
