@@ -1,0 +1,11 @@
+# Use an official OpenJDK runtime as the base image
+FROM openjdk:11-jre-slim
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy the JAR file from your host to the container
+COPY your-java-program.jar /app/your-java-program.jar
+
+# Command to run your Java program
+CMD ["java", "-jar", "your-java-program.jar"]
