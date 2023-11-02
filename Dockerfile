@@ -1,11 +1,15 @@
-# Use an official OpenJDK runtime as the base image
+# Use an official OpenJDK runtime as a parent image
 FROM openjdk:11-jre-slim
 
-# Set the working directory inside the container
+# Set the working directory
 WORKDIR /app
 
-# Copy your Java program from the local Git repository into the container
-COPY . /app
+# Copy your Java application into the container
+COPY Hello.java .
 
-# Command to run your Java program
-CMD ["java", "-jar", "Hello.jar"]
+# Compile your Java code
+RUN javac Hello.java
+
+# Define the command to run your Java application
+CMD ["java", "Hello"]
+
