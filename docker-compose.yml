@@ -1,0 +1,8 @@
+version: '3'
+services:
+  container1:
+    image: your-java-app
+  container2:
+    image: your-java-app
+  container3:
+    image: your-java-app
